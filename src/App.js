@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase from 'firebase';
+import FileUpload from './FileUpload'
 class App extends Component {
   constructor () {
     super();
@@ -36,6 +37,7 @@ class App extends Component {
           <img src={this.state.user.photoURL} alt={this.state.user.displayName} />
           <p>Bienvenido {this.state.user.displayName}!</p>
           <button onClick={this.handleLogout}>Salir</button>
+          <FileUpload />
         </div>
       );
     }else {
